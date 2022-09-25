@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="390.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="saperControl">
+   <Button fx:id="button1" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button2" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button3" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button4" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button5" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button6" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button7" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button8" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button9" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button10" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="47.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button11" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button12" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button13" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button14" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button15" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button16" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button17" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button18" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button19" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button20" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="72.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button21" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button22" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button23" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button24" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button25" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button26" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button27" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button28" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button29" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button30" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="97.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button31" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button32" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button33" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button34" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button35" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button36" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button37" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button38" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button39" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button40" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="122.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button41" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button42" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button43" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button44" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button45" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button46" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button47" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button48" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button49" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button50" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="147.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button51" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button52" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button53" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button54" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button55" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button56" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button57" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button58" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button59" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button60" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="172.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button61" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button62" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button63" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button64" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button65" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button66" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button67" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button68" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button69" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button70" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="197.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button71" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button72" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button73" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button74" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button75" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button76" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button77" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button78" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button79" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button80" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="222.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button81" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button82" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button83" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button84" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button85" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button86" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button87" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button88" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button89" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button90" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="247.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button91" alignment="CENTER" contentDisplay="CENTER" layoutX="175.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button92" alignment="CENTER" contentDisplay="CENTER" layoutX="200.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button93" alignment="CENTER" contentDisplay="CENTER" layoutX="225.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button94" alignment="CENTER" contentDisplay="CENTER" layoutX="250.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button95" alignment="CENTER" contentDisplay="CENTER" layoutX="275.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button96" alignment="CENTER" contentDisplay="CENTER" layoutX="300.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button97" alignment="CENTER" contentDisplay="CENTER" layoutX="325.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button98" alignment="CENTER" contentDisplay="CENTER" layoutX="350.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button99" alignment="CENTER" contentDisplay="CENTER" layoutX="375.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="button100" alignment="CENTER" contentDisplay="CENTER" layoutX="400.0" layoutY="272.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="25.0" style="-fx-font-weight: bold" />
+   <Button fx:id="restartButton" alignment="CENTER" contentDisplay="CENTER" layoutX="496.0" layoutY="17.0" mnemonicParsing="false" prefHeight="60.0" prefWidth="69.0" text="Restart">
+      <font>
+         <Font size="14.0" />
+      </font>
+   </Button>
+   <Label fx:id="timeLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="14.0" layoutY="17.0" prefHeight="60.0" prefWidth="146.0" style="-fx-border-radius: 10; -fx-border-color: black; -fx-background-color: #cccccc;">
+      <font>
+         <Font size="48.0" />
+      </font>
+   </Label>
+   <Label fx:id="gameOverLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="174.0" layoutY="8.0" prefHeight="39.0" prefWidth="252.0" style="-fx-font-weight: bold;" text="Game Over" visible="false">
+      <font>
+         <Font size="18.0" />
+      </font>
+   </Label>
+</Pane>
