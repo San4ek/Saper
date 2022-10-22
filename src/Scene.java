@@ -16,6 +16,7 @@ public class Scene {
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         window.setScene(new javafx.scene.Scene(Objects.requireNonNull(root)));
     }
 }
