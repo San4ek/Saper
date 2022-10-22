@@ -14,7 +14,6 @@ import java.util.Map;
 import java.util.ResourceBundle;
 
 public class saperControl implements Initializable {
-
     @FXML
     private Button restartButton;
 
@@ -50,7 +49,6 @@ public class saperControl implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
         ArrayList<String> bombList = addBombNumb();
         Map<String, String> buttonList=setNumber(bombList);
-        timer.start();
 
         restartButton.setOnAction(event-> scene.showScene(Const.SAPER_SCENE, restartButton));
 
@@ -58,23 +56,30 @@ public class saperControl implements Initializable {
 
         pane.addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
             if (event.getTarget() instanceof Button) {
-                if (event.getButton().name().equals(MouseButton.PRIMARY.name()) && !((Button) event.getTarget()).getText().equals(Const.BOMB_IS_HERE)) {
+                if (numbOfFire==1) timer.start();
+                if (event.getButton().name().equals(MouseButton.PRIMARY.name()) &&
+                        !((Button) event.getTarget()).getText().equals(Const.BOMB_IS_HERE)) {
                     if (bombList.contains(((Button) event.getTarget()).getId())) {
                         timer.stop();
-                        ((Button) event.getTarget()).setStyle(Const.BACKGROUND_COLOR_RED+";"+Const.FONT_WEIGHT_BOLD+";"+Const.BORDER_COLOR_BLACK);
+                        ((Button) event.getTarget()).setStyle(Const.BACKGROUND_COLOR_RED + ";" +
+                                Const.FONT_WEIGHT_BOLD + ";" +
+                                Const.BORDER_COLOR_BLACK);
                         setVisibleGameOverLabel();
                         showAllBombs(bombList);
                         openField(buttonList);
                     }
-
-                    ++numbOfFire;
                     if (numbOfFire == Const.NUMB_OF_POINTS - Const.NUMB_OF_BOMBS) {
                         timer.stop();
                         setDisableAllButtons();
                         gameOverLabel.setVisible(true);
-                        gameOverLabel.setStyle(Const.TEXT_FILL_GREEN + "; " + Const.FONT_WEIGHT_BOLD);
-                        timeLabel.setStyle(Const.TEXT_FILL_GREEN + "; " + Const.BORDER_RADIUS_10 + "; " + Const.BORDER_COLOR_GREEN + "; " + Const.BACKGROUND_COLOR_GREY);
+                        gameOverLabel.setStyle(Const.TEXT_FILL_GREEN + "; " +
+                                Const.FONT_WEIGHT_BOLD);
+                        timeLabel.setStyle(Const.TEXT_FILL_GREEN + "; " +
+                                Const.BORDER_RADIUS_10 + "; " +
+                                Const.BORDER_COLOR_GREEN + "; " +
+                                Const.BACKGROUND_COLOR_GREY);
                     }
+                    System.out.println(numbOfFire);
                 }
                 if (event.getButton().name().equals(MouseButton.SECONDARY.name())) {
                     if (((Button) event.getTarget()).getText().isEmpty()) {
@@ -85,11 +90,16 @@ public class saperControl implements Initializable {
         });
     }
 
+
     private void setVisibleGameOverLabel() {
        timer.stop();
        gameOverLabel.setVisible(true);
-       gameOverLabel.setStyle(Const.TEXT_FILL_RED+"; "+Const.FONT_WEIGHT_BOLD);
-       timeLabel.setStyle(Const.BACKGROUND_COLOR_GREY+"; "+Const.BORDER_RADIUS_10+"; "+Const.BORDER_COLOR_RED+"; "+Const.TEXT_FILL_RED);
+       gameOverLabel.setStyle(Const.TEXT_FILL_RED+"; "+
+               Const.FONT_WEIGHT_BOLD);
+       timeLabel.setStyle(Const.BACKGROUND_COLOR_GREY+"; "+
+               Const.BORDER_RADIUS_10+"; "+
+               Const.BORDER_COLOR_RED+"; "+
+               Const.TEXT_FILL_RED);
    }
 
    private void showAllBombs(ArrayList<String> bombList) {
@@ -97,12 +107,16 @@ public class saperControl implements Initializable {
            if (object instanceof Button) {
                if (bombList.contains(((Button) object).getId())) {
                    if (((Button) object).getText()!=null && ((Button) object).getText().equals(Const.BOMB_IS_HERE)) {
-                       ((Button) object).setStyle(Const.BACKGROUND_COLOR_GREEN+";"+Const.FONT_WEIGHT_BOLD+";"+Const.BORDER_COLOR_BLACK);
+                       ((Button) object).setStyle(Const.BACKGROUND_COLOR_GREEN+";"+
+                               Const.FONT_WEIGHT_BOLD+";"+
+                               Const.BORDER_COLOR_BLACK);
                    }
                }
                if (((Button) object).getText()!=null && ((Button) object).getText().equals(Const.BOMB_IS_HERE)) {
                    if (!bombList.contains(((Button) object).getId())) {
-                       ((Button) object).setStyle(Const.BACKGROUND_COLOR_YELLOW+";"+Const.FONT_WEIGHT_BOLD+";"+Const.BORDER_COLOR_BLACK);
+                       ((Button) object).setStyle(Const.BACKGROUND_COLOR_YELLOW+";"+
+                               Const.FONT_WEIGHT_BOLD+";"+
+                               Const.BORDER_COLOR_BLACK);
                    }
                }
            }
@@ -130,6 +144,7 @@ public class saperControl implements Initializable {
                            case 2, 3, 4, 5, 6, 7, 8, 9 -> {
                                int finalI = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -150,6 +165,7 @@ public class saperControl implements Initializable {
                            case 92, 93, 94, 95, 96, 97, 98, 99 -> {
                                int finalI1 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -168,6 +184,7 @@ public class saperControl implements Initializable {
                            case 11, 21, 31, 41, 51, 61, 71, 81 -> {
                                int finalI2 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -186,6 +203,7 @@ public class saperControl implements Initializable {
                            case 20, 30, 40, 50, 60, 70, 80 -> {
                                int finalI3 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -204,6 +222,7 @@ public class saperControl implements Initializable {
                            case 1 -> {
                                int finalI4 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -220,6 +239,7 @@ public class saperControl implements Initializable {
                            case 10 -> {
                                int finalI5 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -236,6 +256,7 @@ public class saperControl implements Initializable {
                            case 91 -> {
                                int finalI6 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -251,6 +272,7 @@ public class saperControl implements Initializable {
                            case 100 -> {
                                int finalI7 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -266,6 +288,7 @@ public class saperControl implements Initializable {
                            default -> {
                                int finalI8 = i;
                                ((Button) object).setOnAction(event -> {
+                                   ++numbOfFire;
                                    ((Button) object).setText(buttonList.get(((Button) object).getId()));
                                    ((Button) object).setDisable(true);
                                    for (Object newObject : pane.getChildren().toArray()) {
@@ -286,8 +309,11 @@ public class saperControl implements Initializable {
                        }
                    } else {
                        ((Button) object).setOnAction( event -> {
-                           ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                           ((Button) object).setDisable(true);
+                           ++numbOfFire;
+                           if (!((Button) object).getText().equals(Const.BOMB_IS_HERE)) {
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                           }
                        });
                    }
                    ++i;
@@ -416,4 +442,3 @@ public class saperControl implements Initializable {
        }
    };
 }
-
