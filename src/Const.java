@@ -23,9 +23,6 @@ public class Const {
 
     public static final String BOMB_IS_HERE="!";
 
-
-
-
     public static final int NUMB_OF_BOMBS=17;
     public static final int NUMB_OF_POINTS=100;
 }
