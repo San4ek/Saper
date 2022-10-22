@@ -19,9 +19,6 @@ public class Const {
     public static final String BORDER_RADIUS_10 ="-fx-border-radius: 10";
     public static final String FONT_WEIGHT_BOLD="-fx-font-weight: bold";
 
-
-
-
     public static final String RESTART_BUTTON="restartButton";
 
     public static final String BOMB_IS_HERE="!";
