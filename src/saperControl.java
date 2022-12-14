@@ -33,8 +33,6 @@ public class saperControl implements Initializable {
    private ArrayList<String> addBombNumb() {
        ArrayList<String> bombList = new ArrayList<>(Const.NUMB_OF_BOMBS);
        int i = 0;
-
-
        while (i < Const.NUMB_OF_BOMBS) {
            int bombNumb = Random.getRandNumber();
            while (bombList.contains("button"+ bombNumb)) {
