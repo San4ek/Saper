@@ -31,6 +31,7 @@ public class saperControl implements Initializable {
     Scene scene=new Scene();
 
    private ArrayList<String> addBombNumb() {
+
        ArrayList<String> bombList = new ArrayList<>(Const.NUMB_OF_BOMBS);
        int i = 0;
        while (i < Const.NUMB_OF_BOMBS) {
@@ -50,13 +51,13 @@ public class saperControl implements Initializable {
         ArrayList<String> bombList = addBombNumb();
         Map<String, String> buttonList=setNumber(bombList);
 
+        timer.start();
         restartButton.setOnAction(event-> scene.showScene(Const.SAPER_SCENE, restartButton));
 
         setOnActionButtons(buttonList);
 
         pane.addEventFilter(MouseEvent.MOUSE_CLICKED, event -> {
             if (event.getTarget() instanceof Button) {
-                if (numbOfFire==1) timer.start();
                 if (event.getButton().name().equals(MouseButton.PRIMARY.name()) &&
                         !((Button) event.getTarget()).getText().equals(Const.BOMB_IS_HERE)) {
                     if (bombList.contains(((Button) event.getTarget()).getId())) {
@@ -79,7 +80,6 @@ public class saperControl implements Initializable {
                                 Const.BORDER_COLOR_GREEN + "; " +
                                 Const.BACKGROUND_COLOR_GREY);
                     }
-                    System.out.println(numbOfFire);
                 }
                 if (event.getButton().name().equals(MouseButton.SECONDARY.name())) {
                     if (((Button) event.getTarget()).getText().isEmpty()) {
@@ -135,177 +135,150 @@ public class saperControl implements Initializable {
    }
 
    private void setOnActionButtons(Map<String, String> buttonList) {
-       int i = 1;
        for (Object object : pane.getChildren().toArray()) {
            if (object instanceof Button) {
                if (!((Button) object).getId().equals(Const.RESTART_BUTTON)) {
                    if (buttonList.get(((Button) object).getId()).equals("")) {
+                       int i=Integer.parseInt(((Button) object).getId().replaceAll("button", ""));
                        switch (i) {
-                           case 2, 3, 4, 5, 6, 7, 8, 9 -> {
-                               int finalI = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI + 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI - 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI + 9)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI + 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI + 11))) {
-                                               ((Button) newObject).fire();
-                                           }
+                           case 2, 3, 4, 5, 6, 7, 8, 9 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i + 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 9)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 11))) {
+                                           ((Button) newObject).fire();
+                                       }
+                                   }
+                               }
+                           });
 
-                                       }
+                           case 92, 93, 94, 95, 96, 97, 98, 99 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i + 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 9)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 11)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
+                               }
+                           });
 
-                           case 92, 93, 94, 95, 96, 97, 98, 99 -> {
-                               int finalI1 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI1 + 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI1 - 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI1 - 9)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI1 - 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI1 - 11)))
-                                               ((Button) newObject).fire();
-                                       }
+                           case 11, 21, 31, 41, 51, 61, 71, 81 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i + 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 11)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 9)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
+                               }
+                           });
 
-                           case 11, 21, 31, 41, 51, 61, 71, 81 -> {
-                               int finalI2 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI2 + 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI2 + 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI2 + 11)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI2 - 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI2 - 9)))
-                                               ((Button) newObject).fire();
-                                       }
+                           case 20, 30, 40, 50, 60, 70, 80 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i + 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 9)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 11)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
+                               }
+                           });
 
-                           case 20, 30, 40, 50, 60, 70, 80 -> {
-                               int finalI3 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI3 + 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI3 - 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI3 + 9)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI3 - 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI3 - 11)))
-                                               ((Button) newObject).fire();
-                                       }
+                           case 1 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i + 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 11)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
+                               }
+                           });
 
-                           case 1 -> {
-                               int finalI4 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI4 + 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI4 + 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI4 + 11)))
-                                               ((Button) newObject).fire();
-                                       }
+                           case 10 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i + 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 9)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
+                               }
+                           });
 
-                           case 10 -> {
-                               int finalI5 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI5 + 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI5 - 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI5 + 9)))
-                                               ((Button) newObject).fire();
-                                       }
+                           case 91 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i - 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 9)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
-
-                           case 91 -> {
-                               int finalI6 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI6 - 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI6 + 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI6 - 9)))
-                                               ((Button) newObject).fire();
-                                       }
+                               }
+                           });
+                           case 100 -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               System.out.println(100);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i - 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 11)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
-                           case 100 -> {
-                               int finalI7 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI7 - 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI7 - 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI7 - 11)))
-                                               ((Button) newObject).fire();
-                                       }
+                               }
+                           });
+                           default -> ((Button) object).setOnAction(event -> {
+                               ++numbOfFire;
+                               ((Button) object).setText(buttonList.get(((Button) object).getId()));
+                               ((Button) object).setDisable(true);
+                               for (Object newObject : pane.getChildren().toArray()) {
+                                   if (newObject instanceof Button) {
+                                       if (((Button) newObject).getId().equals("button" + (i - 9)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 1)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 10)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 11)) ||
+                                               ((Button) newObject).getId().equals("button" + (i - 11)) ||
+                                               ((Button) newObject).getId().equals("button" + (i + 9)))
+                                           ((Button) newObject).fire();
                                    }
-                               });
-                           }
-                           default -> {
-                               int finalI8 = i;
-                               ((Button) object).setOnAction(event -> {
-                                   ++numbOfFire;
-                                   ((Button) object).setText(buttonList.get(((Button) object).getId()));
-                                   ((Button) object).setDisable(true);
-                                   for (Object newObject : pane.getChildren().toArray()) {
-                                       if (newObject instanceof Button) {
-                                           if (((Button) newObject).getId().equals("button" + (finalI8 - 9)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 + 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 - 1)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 + 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 - 10)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 + 11)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 - 11)) ||
-                                                   ((Button) newObject).getId().equals("button" + (finalI8 + 9)))
-                                               ((Button) newObject).fire();
-                                       }
-                                   }
-                               });
-                           }
+                               }
+                           });
                        }
                    } else {
                        ((Button) object).setOnAction( event -> {
@@ -316,7 +289,6 @@ public class saperControl implements Initializable {
                            }
                        });
                    }
-                   ++i;
                }
            }
        }
